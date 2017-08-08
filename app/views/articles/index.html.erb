@@ -1,0 +1,14 @@
+<h1>Tous les articles</h1>
+
+<ul>
+
+  <% @articles.each do |article| %>
+    <li>
+      <%= article.title  %>
+      <%= link_to "Voir", article_path(article) %>
+      <%= link_to "Modifier", edit_article_path(article) %>
+      <%= link_to "Supprimer", article_path(article), method: :delete %>
+    </li>
+
+  <% end %>
+</ul>
